@@ -1,0 +1,65 @@
+.carousel-wrapper {
+  .btn-group {
+    text-align: center;
+    margin: 10px 0;
+
+    .btn {
+      width: 80px;
+      font-size: 16px;
+      height: 40px;
+      cursor: pointer;
+      background-color: aliceblue;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      margin: 0 5px;
+
+      &.active {
+        color: white;
+        background-color: purple;
+      }
+    }
+  }
+
+  .carousel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 450px;
+    padding: 0 40px;
+
+    .carousel-control {
+      width: 25px;
+      height: 50px;
+      cursor: pointer;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      background-image: url('./arrow-icon.svg');
+      background-repeat: no-repeat;
+      background-size: 25px 50px;
+      opacity: 0;
+      visibility: hidden;
+
+      &.prev {
+        transform: rotate(180deg);
+        transform-origin: center;
+      }
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    img {
+      max-height: 400px;
+    }
+  }
+}

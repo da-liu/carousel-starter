@@ -1,0 +1,69 @@
+{
+  "name": "carousel-soln",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "nodemon ./bin/www",
+    "start-client": "webpack-dev-server",
+    "clean": "rimraf build",
+    "build": "npm run clean && NODE_ENV=production webpack -p --config ./webpack.config.prod.js",
+    "lint": "eslint src test"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "axios": "^0.17.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-root-import": "^4.1.8",
+    "babel-runtime": "^6.26.0",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "css-loader": "^0.28.9",
+    "debug": "~2.6.9",
+    "deep-equal": "^1.0.1",
+    "express": "~4.15.5",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "morgan": "~1.9.0",
+    "postcss-loader": "^2.0.10",
+    "precss": "^3.1.0",
+    "pug": "2.0.0-beta11",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-transition-group": "^2.2.1",
+    "reactstrap": "^4.8.0",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3",
+    "rimraf": "2.6.2",
+    "serve-favicon": "~2.4.5",
+    "style-loader": "^0.20.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "nodemon": "^1.14.11",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-0"
+    ],
+    "plugins": [
+      "babel-root-import"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
